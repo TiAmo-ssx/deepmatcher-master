@@ -23,8 +23,9 @@ model = dm.MatchingModel(attr_summarizer='hybrid')
 #模型训练：训练神经网络。
 model.run_train(train,
                 validation,
+                device=0,
                 epochs=10,
-                batch_size=16,
+                batch_size=64,
                 best_save_path='hybrid_model.pth',
                 pos_neg_ratio=2
                 )
